@@ -1,10 +1,8 @@
 <?php
-// Establish a connection to your MongoDB database
 $mongoClient = new MongoDB\Client("mongodb://localhost:27017");
 $database = $mongoClient->selectDatabase('Profile');
 $collection = $database->selectCollection('profileinfo');
 
-// Retrieve form data
 $name = $_POST["name"];
     $age = $_POST["age"];
     $gender = $_POST["gender"];
@@ -18,7 +16,6 @@ $name = $_POST["name"];
     $pincode = $_POST["pincode"];
     $nationality = $_POST["nationality"];
 
-// Save data to MongoDB
 $document = [
     "name" => $name,
     "age" => (int)$age,
