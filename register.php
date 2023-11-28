@@ -1,5 +1,4 @@
 <?php
-// Establish a connection to your MySQL database
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -7,20 +6,16 @@ $dbname = "signup";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Retrieve form data
 $name = $_POST['Name'];
 $email = $_POST['Email'];
 $password = $_POST['Password'];
 $confirm = $_POST['Confirm'];
 
-// Add more secure password handling (e.g., hashing) in a production environment
 
-// Insert data into MySQL
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $checkEmailQuery = "SELECT * FROM register WHERE Email='$email'";
