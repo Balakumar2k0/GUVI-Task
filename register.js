@@ -1,7 +1,5 @@
 function validateForm() {
-    // Add your validation logic here
     
-    // Example: Basic validation for demonstration
     var name = document.getElementById('Name').value;
     var email = document.getElementById('Email').value;
     var password = document.getElementById('Password').value;
