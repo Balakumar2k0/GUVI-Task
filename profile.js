@@ -1,13 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const path = require("path"); // Import the 'path' module
+const path = require("path");
 
 const app = express();
 
 app.use(bodyParser.json());
 
-// Use path.join to get the correct file path
 app.use(express.static(path.join(__dirname, 'profile')));
 
 app.use(bodyParser.urlencoded({
@@ -62,7 +61,7 @@ app.get("/", (req, res) => {
     res.set({
         "Allow-access-Allow-Origin": '*'
     });
-    // Use path.join to get the correct file path
+    
     res.sendFile(path.join(__dirname, 'profile.html'));
 });
 
