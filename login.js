@@ -1,7 +1,5 @@
 function validateLoginForm() {
-  // Add your validation logic here
   
-  // Example: Basic validation for demonstration
   var name = document.getElementById('username').value;
   var password = document.getElementById('password').value;
 
